@@ -34,8 +34,8 @@ func main() {
 		var wg sync.WaitGroup
 
 		wg.Add(2)
-		go greeting("Pedro", &wg)
-		go greeting("Pablo", &wg)
+		go greeting("Pedro!", &wg)
+		go greeting("Pablo!", &wg)
 
 		wg.Wait()
 
