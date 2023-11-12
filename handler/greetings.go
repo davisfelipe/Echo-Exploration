@@ -14,7 +14,7 @@ type HelloResponse struct {
 
 func Hello(c echo.Context) error {
 	fmt.Println("Hola mundo")
-	qParams := c.Param("q")
+	qParams := c.QueryParam("q")
 	if qParams == "" {
 		return c.JSON(http.StatusBadRequest, HelloResponse{
 			Message: "Hola Mundo",
